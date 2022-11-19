@@ -1,0 +1,69 @@
+.nav {
+    @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.nav__item + .nav__item {
+    @media (min-width: 768px) {
+        margin-left: 50px;
+    }
+}
+
+.nav__link {
+    display: block;
+    padding-bottom: 32px;
+    position: relative;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $text-color-main;
+    text-decoration: none;
+
+    transition: color $transition-prop;
+
+    &:hover,
+    &:focus,
+    &.active {
+        color: $accent-color;
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 32px;
+
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav__link::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        opacity: 0;
+
+        border-radius: 2px;
+        background-color: $accent-color;
+
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        transition: opacity $transition-prop;
+    }
+
+    .nav__link:hover::after,
+    .nav__link:focus::after,
+    .nav__link.active::after {
+        opacity: 1;
+    }
+}

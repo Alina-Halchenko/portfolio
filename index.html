@@ -1,451 +1,752 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-  <link rel="stylesheet" href="./css/main.min.css">
-    <title>Document</title>
-</head>
-<body>
-  <header>
-    <div class="container wrap wrap--header">
-      <a class="logo" href="./index.html">Web<span class="logo--top">Studio</span></a>
-      <!--Site navigation-->
-      <nav>
-        <ul class="site-nav">
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
-        </ul>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+    <link rel="icon" href="./assets/image/svg/logo-icon.svg" />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container header--wrap">
+        <a class="logo" href="./index.html">My<span class="logo--header">Portfolio</span></a>
+
+        <div class="header__menu-container" data-menu>
+
+          <ul class="header__contacts">
+            <li class="header__contacts-item">
+              <a class="header__contacts-link" href="mailto:nordinia8@gmail.com">
+                <svg class="header__contacts-icon" width="16" height="12">
+                  <use href="./assets/image/svg/symbol-defs.svg#email"></use>
+                </svg>
+                Email me</a
+              >
+            </li>
+            <li class="header__contacts-item">
+              <a class="header__contacts-link" href="tel:+17788767841">
+                <svg class="header__contacts-icon" width="10" height="16">
+                  <use
+                    href="./assets/image/svg/symbol-defs.svg#smartphone"
+                  ></use>
+                </svg>
+                Call me</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
-      <!--Phone and email-->
-      <div class="contacts">
-        <a class="contacts__link contacts__link--header" href="mailto:info@devstudio.com">
-          <svg class="contacts__icon" width="16px" height="12px">
-            <use href="./images/symbol-defs.svg#icon-envelope"></use>
-          </svg>
-          info@devstudio.com</a>
-        <a class="contacts__link contacts__link--header" href="tel:+380961111111">
-          <svg class="contacts__icon" width="10px" height="16px">
-            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-          </svg>
-          +38 096 111 11 11</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-      <button class="hero__button" data-open-modal>Заказать услугу</button>
-    </section>
-    
-<!-- ---------------------MODAL window--------------- -->
-      <div class="backgrop is-hidden" data-backdrop>
-      <div class="modal">
-        <button class="modal__button--close" data-close-modal>
-          <svg width="16" height="16">
-            <use href="./images/symbol-defs.svg#icon-close"></use>
-          </svg>
-        </button>
-        <form autocomplete="off" class="form">
-          <!-- Gave form class "form" just to summarize the block, it doesn't have any CSS -->
-          <h2 class="form__header">Оставьте свои данные, мы вам перезвоним</h2>
-          <div class="form__field">
-            <label for="name" class="form__label">Имя</label>
-            <input class="form__input" type="text" name="name" id="name" />
-            <svg class="form__icon" width="18px" height="18px">
-              <use href="./images/symbol-defs.svg#icon-person-black"></use>
-            </svg>
-          </div>
-          <div class="form__field">
-            <label for="tel" class="form__label">Телефон</label>
-            <input class="form__input" type="text" name="tel" id="tel" />
-            <svg class="form__icon" width="18px" height="18px">
-              <use href="./images/symbol-defs.svg#icon-phone-black"></use>
-            </svg>
-          </div>
-          <div class="form__field">
-            <label for="email" class="form__label">Почта</label>
-            <input class="form__input" type="text" name="email" id="email" />
-            <svg class="form__icon" width="18px" height="18px">
-              <use href="./images/symbol-defs.svg#icon-email-black"></use>
-            </svg>
-          </div>
-          <div class="form__field">
-          <label for="comment" class="form__label">Комментарий</label>
-            <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
-          </div>
+    </header>
 
-          <div class="checkbox">
-            <input type="checkbox" id="checkbox" class="checkbox__input" />
-            <span class="checkbox__icon"></span>
-            <label class="checkbox-label" for="checkbox">Соглашаюсь с рассылкой и принимаю <a class="checkbox__link" href="">Условия договора</a></label>
-          </div>
+    <main>
+      <section class="portfolio section">
+        <div class="container">
+          <h2 class="hidden" aria-hidden="true" tabindex="-1">hide</h2>
 
-          <button class="form__button" type="submit">Отправить</button>
-        </form>
-      </div>
-    </div>
-<!-- --------------------END of Modal wondow------------------ -->
+          <ul class="works">
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-1-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-1-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-1-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-1-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-1-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-1-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-1-450w.jpg"
+                      alt="Веб-сайт: Технокряк"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Технокряк</h3>
+                  <p class="works__category">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-2-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-2-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-2-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-2-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-2-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-2-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-2-450w.jpg"
+                      alt="Дизайн: Постер Новый Орлеан против Золотой Звезды"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Постер New Orlean vs Golden Star</h3>
+                  <p class="works__category">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-3-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-3-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-3-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-3-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-3-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-3-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-3-450w.jpg"
+                      alt="Приложение: Ресторан МорскаяЕда"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Ресторан Seafood</h3>
+                  <p class="works__category">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-4-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-4-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-4-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-4-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-4-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-4-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-4-450w.jpg"
+                      alt="Маркетинг: Проект Основной"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Проект Prime</h3>
+                  <p class="works__category">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-5-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-5-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-5-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-5-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-5-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-5-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-5-450w.jpg"
+                      alt="Приложение: Проект Коробки"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Проект Boxes</h3>
+                  <p class="works__category">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-6-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-6-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-6-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-6-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-6-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-6-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-6-450w.jpg"
+                      alt="Веб-сайт: Вдохновение не имеет границ"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Inspiration has no Borders</h3>
+                  <p class="works__category">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-7-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-7-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-7-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-7-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-7-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-7-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-7-450w.jpg"
+                      alt="Дизайн: Издание Ограниченный выпуск"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Издание Limited Edition</h3>
+                  <p class="works__category">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-8-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-8-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-8-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-8-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-8-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-8-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-8-450w.jpg"
+                      alt="Маркетинг: Проект ЛАБ"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Проект LAB</h3>
+                  <p class="works__category">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a
+                class="works__link"
+                href=""
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    Далеко-далеко за словесными горами в стране гласных, и
+                    согласных живут рыбные тексты. Гор которой ведущими силуэт
+                    образ агентство пор. Сих, власти возвращайся.
+                  </p>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-9-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-9-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-9-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-9-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-9-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-9-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-9-450w.jpg"
+                      alt="Приложение: Растущий бизнес"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Growing Business</h3>
+                  <p class="works__category">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-    <!--Наши преимущества-->
-    <section class="section">
-      <h2 class="visually-hidden">Наши преимущества</h2>
+    <footer class="footer">
       <div class="container">
-        <ul class="benefits"> 
-          <!-- Gave ul class "benefits" just to summarize the block, it doesn't have any CSS -->
-          <li class="benefits__item">
-            <div class="benefits__thumb">
-              <svg class="benefits__icon" width="65.32px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-antenna"></use>
-              </svg>
-            </div>
-            <h3 class="benefits__title">Внимание к деталям</h3>
-            <p class="benefits__description">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
-          </li>
-          <li class="benefits__item">
-            <div class="benefits__thumb">
-              <svg class="benefits__icon" width="66.96px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-clock"></use>
-              </svg>
-            </div>
-            <h3 class="benefits__title">Пунктуальность</h3>
-            <p class="benefits__description">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
-          </li>
-          <li class="benefits__item">
-            <div class="benefits__thumb">
-              <svg class="benefits__icon" width="70px" height="53.69px">
-                <use href="./images/symbol-defs.svg#icon-diagram"></use>
-              </svg>
-            </div>
-            <h3 class="benefits__title">Планирование</h3>
-            <p class="benefits__description">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
-          </li>
-          <li class="benefits__item">
-            <div class="benefits__thumb">
-              <svg class="benefits__icon" width="70px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-astronaut"></use>
-              </svg>
-            </div>
-            <h3 class="benefits__title">Современные технологии</h3>
-            <p class="benefits__description">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!--Чем мы занимаемся-->
-    <section class="section remove-padding-part">
-      <div class="container">
-        <h2 class="title">Чем мы занимаемся</h2>
-        <ul class="our-works">
-<!-- Gave ul class "benefits" just to summarize the block, it doesn't have any CSS -->
-          <li class="our-works__item">
-            <img class="our-works__image" src="./images/img1.jpg" alt="разработка кода" width="370">
-            <div class="our-works__thumb">
-              <p class="our-works__description">Десктопные приложения</p>
-            </div>
-          </li>
-          <li class="our-works__item">
-            <img class="our-works__image" src="./images/img2.jpg" alt="разработка дизайна" width="370">
-            <div class="our-works__thumb">
-              <p class="our-works__description">Мобильные приложения</p>
-            </div>
-          </li>
-          <li class="our-works__item">
-            <img class="our-works__image" src="./images/img3.jpg" alt="разработка графики" width="370">
-            <div class="our-works__thumb">
-              <p class="our-works__description">Дизайнерские решения</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!--Наша команда-->
-    <section class="our-team section">
-      <div class="container">
-        <h2 class="title">Наша команда</h2>
-        <ul class="our-team">
-          <li class="our-team__item">
-            <img src="./images/img4.jpg" alt="брюнет в очках и коричневой рубашке" width="270">
-            <div class="our-team__meta">
-              <h3 class="our-team__names">Игорь Демьяненко</h3>
-              <p class="our-team__position" lang="en">Product Designer</p>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                  <svg class="social__icon" width="20px" height="16.25px">
-                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                  <svg class="social__icon" width="10px" height="20px">
-                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                  <svg class="social__icon" width="20px" height="20px">
-                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="our-team__item">
-            <img src="./images/img5.jpg" alt="блондинка в очках" width="270">
-            <div class="our-team__meta">
-              <h3 class="our-team__names">Ольга Репина</h3>
-              <p class="our-team__position" lang="en">Frontend Developer</p>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                  <svg class="social__icon" width="20px" height="16.25px">
-                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                  <svg class="social__icon" width="10px" height="20px">
-                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                  <svg class="social__icon" width="20px" height="20px">
-                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="our-team__item">
-            <img src="./images/img6.jpg" alt="брюнет в белой рубашке" width="270">
-            <div class="our-team__meta">
-              <h3 class="our-team__names">Николай Тарасов</h3>
-              <p class="our-team__position" lang="en">Marketing</p>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="16.25px">
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="10px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="our-team__item">
-            <img src="./images/img7.jpg" alt="брюнет в очках и черной футболке" width="270">
-            <div class="our-team__meta">
-              <h3 class="our-team__names">Михаил Ермаков</h3>
-              <p class="our-team__position" lang="en">UI Designer</p>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="16.25px">
-                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="10px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="">
-                    <svg class="social__icon" width="20px" height="20px">
-                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!--Постоянные клиенты-->
-    <section class="section">
-      <div class="container">
-        <h2 class="title">Постоянные клиенты</h2>
-        <ul class="clients">
-<!-- Gave ul class "clients" just to summarize the block, it doesn't have any CSS -->
-          <li class="clients__item">
-            <a class="clients__link" href="">
-            <svg class="clients__icon" width="106px" height="60px">
-              <use href="./images/symbol-defs.svg#icon-logoyeanco"></use>
-            </svg>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <svg class="clients__icon" width="106px" height="60px">
-                <use href="./images/symbol-defs.svg#icon-logotagline"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <svg class="clients__icon" width="106px" height="60px">
-                <use href="./images/symbol-defs.svg#icon-logocompany"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <svg class="clients__icon" width="106px" height="60px">
-                <use href="./images/symbol-defs.svg#icon-logofoster"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <svg class="clients__icon" width="106px" height="60px">
-                <use href="./images/symbol-defs.svg#icon-logobrand"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="clients__item">
-            <a class="clients__link" href="">
-              <svg class="clients__icon" width="106px" height="60px">
-                <use href="./images/symbol-defs.svg#icon-logotagline2"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container wrap wrap--footer">
-      <div class="footer-column">
-        <a class="logo" href="./index.html">Web<span class="logo--footer">Studio</span></a>
-        <address class="address-footer">
-          г. Киев, пр-т Леси Украинки, 26
-        </address>
-        <a class="contacts__link contacts__link--footer" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        <a class="contacts__link contacts__link--footer" href="tel:+380961111111">+38 096 111 11 11</a>
-      </div>
-      <div class="footer-column">
-        <h2 class="title--footer">Присоединяйтесь</h2>
-        <ul class="social--footer">
-          <li class="social__item--footer">
-            <a class="social__link--footer" href="">
-              <svg class="icon--footer" width="20px" height="20px">
-                <use href="./images/symbol-defs.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item--footer">
-            <a class="social__link--footer" href="">
-              <svg class="icon--footer" width="20px" height="16.25px">
-                <use href="./images/symbol-defs.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item--footer">
-            <a class="social__link--footer" href="">
-              <svg class="icon--footer" width="10px" height="20px">
-                <use href="./images/symbol-defs.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item--footer">
-            <a class="social__link--footer" href="">
-              <svg class="icon--footer" width="20px" height="20px">
-                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    
-      <form class="signup">
-        <label class="signup__label">
-          <span class="signup__call">Подпишитесь на рассылку</span>
-          <input type="email" name="subscribe-email" placeholder="E-mail" class="signup_input" />
-        </label>
-        <button class="signup__button" type="submit">Подписаться</button>
-      </form>
-    
-    </div>
-  </footer>
-  <script>
-    const refs = {
-    openModalBtn: document.querySelector("[data-open-modal]"),
-    closeModalBtn: document.querySelector("[data-close-modal]"),
-    backdrop: document.querySelector("[data-backdrop]"),
-    };
+        <div class="footer__block">
+          <a class="logo" href="./index.html"
+            >My<span class="logo--footer">Portfolio</span></a
+          >
+          <ul class="footer__contact">
+            <li>
+              <a class="footer__contact-item" href="mailto:nordinia8@gmail.com"
+                >Email me</a
+              >
+            </li>
+            <li>
+              <a class="footer__contact-item" href="tel:+17788767841"
+                >Call me</a
+              >
+            </li>
+          </ul>
+        </div>
 
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+        <div class="footer__block">
+          <b class="footer__social-title">Test me</b>
+          <form class="form-subscribe">
+            <div class="form-subscribe__thumb">
+              <input
+                class="form-subscribe__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+              />
+              <label class="form-subscribe__label" for="email">Write something</label>
+            </div>
+            <button class="btn btn--with-icon" type="submit">
+              Send
+              <svg class="btn__icon btn__icon--end" width="24" height="24">
+                <use href="./assets/image/svg/symbol-defs.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
 
-    refs.backdrop.addEventListener("click", logBackdropClick);
-
-    function toggleModal() {
-      refs.backdrop.classList.toggle("is-hidden");
-            }
-    function logBackdropClick() {
-    console.log("Это клик в бекдроп");
-            }
-  </script>
-</body>
+  </body>
 </html>
