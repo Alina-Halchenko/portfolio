@@ -91,7 +91,8 @@
     border-top: 0;
 }
 
-.works__title {
+.works__title,
+.self-intro {
     margin-bottom: 5px;
 
     font-size: 18px;
@@ -100,9 +101,23 @@
     color: $text-color-main;
 }
 
-.works__category {
+.self-intro,
+.self-intro-desc {
+    display: block;
+    text-align: center;
+}
+
+.works__category,
+.self-intro-desc {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: $text-color-accent;
+}
+
+.self-intro-desc {
+    margin-bottom: 30px;
+}
+.logo--name {
+    color: $accent-color;
 }
