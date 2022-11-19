@@ -1,0 +1,131 @@
+.address-footer {
+  color: $primaryColor;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  margin-top: 20px;
+}
+
+.contacts__link--footer {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  display: block;
+  margin-top: 9px;
+}
+
+.wrap--footer {
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.title--footer,
+.signup__call {
+  margin-bottom: 20px;
+  padding-top: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $primaryColor;
+  letter-spacing: 0.03em;
+}
+
+.footer-column+.footer-column {
+  margin-left: 70px;
+}
+
+.social__link--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $primaryColor;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    color: $primaryColor;
+  }
+}
+.icon--footer {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: currentColor;
+  }
+}
+
+/*hover and focus are withing the header contact settings */
+/* ----------------------Footer form------------------- */
+.signup {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 93px;
+}
+
+.signup__label {
+  display: flex;
+  flex-wrap: wrap;
+  width: 358px;
+}
+
+.signup__call {
+  display: inline-block;
+}
+
+.signup_input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 15px 16px;
+  color: $primaryColor;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.14;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.signup__button {
+  background-color: $accentColor;
+  padding: 10px 28px;
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+
+  color: $primaryColor;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: 0;
+  border-radius: 4px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.signup > .signup__button::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/send.svg);
+  background-size: contain;
+}

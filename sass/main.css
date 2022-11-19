@@ -1,0 +1,12 @@
+@import url(./utils/_variables.scss);
+@import url(./utils/_mixin.scss);
+@import url(./components/_header.scss);
+@import url(./components/_logo.scss);
+@import url(./components/_hero.scss);
+@import url(./components/_modal.scss);
+@import url(./components/_our-works.scss);
+@import url(./components/_team.scss);
+@import url(./components/_clients.scss);
+@import url(./components/_portfolio.scss);
+@import url(./components/_benefits.scss);
+@import url(./components/_footer.scss);/*# sourceMappingURL=main.css.map */

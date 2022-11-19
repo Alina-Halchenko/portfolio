@@ -1,0 +1,83 @@
+$primaryColor: #ffffff;
+$secondaryTextColor: #757575;
+$primaryTextColor: #212121;
+$accentColor: #2196F3;
+
+h1,
+h2,
+h3,
+p,
+ul,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+header {
+  background-color: $primaryColor;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(236, 236, 236, 0.7);
+  border-bottom-style: solid;
+}
+
+body {
+  color: $primaryColor;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  background-color: #2F303A;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 1200px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.remove-padding-part {
+  padding-top: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.title {
+  color: $primaryTextColor;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
