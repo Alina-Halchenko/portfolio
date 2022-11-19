@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/main.min.css" />
-    <link rel="icon" href="./assets/image/svg/logo-icon.svg" />
+    <link rel="stylesheet" href="./assets/sass/main.css" />
+    <link rel="icon" href="./assets/image/svg/icon-send.svg" />
     <title>My Portfolio</title>
   </head>
   <body>
@@ -51,6 +51,51 @@
           <h2 class="hidden" aria-hidden="true" tabindex="-1">hide</h2>
 
           <ul class="works">
+            <li class="works__item">
+              <a
+                class="works__link"
+                href="https://github.com/Alina-Halchenko/ice-cream-team-project"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+              >
+                <div class="works__thumb">
+                  <p class="works__description">
+                    This is our group project to summarize HTML and CSS part of the course.
+                    The group had 10 people, all with their own tasks that depend on each other.
+                    My role was a Scrum Master, but also developer as each of us needed to do coding.
+                  </p>
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-450w.jpg   1x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-354w.jpg   1x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-370w.jpg   1x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-2-450w.jpg"
+                      alt="Дизайн: Постер Новый Орлеан против Золотой Звезды"
+                    />
+                  </picture>
+                </div>
+                <div class="works__content">
+                  <h3 class="works__title">Team Project: Ice-cream</h3>
+                  <p class="works__category">HTML, CSS(SASS), JS</p>
+                </div>
+              </a>
+            </li>
             <li class="works__item">
               <a
                 class="works__link"
@@ -137,102 +182,6 @@
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
                   <picture>
-                    <source
-                      type="image/webp"
-                      media="(max-width: 767px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-2-450w.webp   1x,
-                        ./assets/image/portfolio/portfolio-work-2-450w@2.webp 2x
-                      "
-                    />
-                    <source
-                      type="image/webp"
-                      media="(min-width: 768px) and (max-width: 1199px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-2-354w.webp   1x,
-                        ./assets/image/portfolio/portfolio-work-2-354w@2.webp 2x
-                      "
-                    />
-                    <source
-                      type="image/webp"
-                      media="(min-width: 1200px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-2-370w.webp   1x,
-                        ./assets/image/portfolio/portfolio-work-2-370w@2.webp 2x
-                      "
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-2-450w.jpg   1x,
-                        ./assets/image/portfolio/portfolio-work-2-450w@2.jpg 2x
-                      "
-                    />
-                    <source
-                      media="(min-width: 768px) and (max-width: 1199px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-2-354w.jpg   1x,
-                        ./assets/image/portfolio/portfolio-work-2-354w@2.jpg 2x
-                      "
-                    />
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-2-370w.jpg   1x,
-                        ./assets/image/portfolio/portfolio-work-2-370w@2.jpg 2x
-                      "
-                    />
-                    <img
-                      class="works__image"
-                      src="./assets/image/portfolio/portfolio-work-2-450w.jpg"
-                      alt="Дизайн: Постер Новый Орлеан против Золотой Звезды"
-                    />
-                  </picture>
-                </div>
-                <div class="works__content">
-                  <h3 class="works__title">Постер New Orlean vs Golden Star</h3>
-                  <p class="works__category">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="works__item">
-              <a
-                class="works__link"
-                href=""
-                target="_blank"
-                rel="nofollow noreferrer noopener"
-              >
-                <div class="works__thumb">
-                  <p class="works__description">
-                    Далеко-далеко за словесными горами в стране гласных, и
-                    согласных живут рыбные тексты. Гор которой ведущими силуэт
-                    образ агентство пор. Сих, власти возвращайся.
-                  </p>
-                  <picture>
-                    <source
-                      type="image/webp"
-                      media="(max-width: 767px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-3-450w.webp   1x,
-                        ./assets/image/portfolio/portfolio-work-3-450w@2.webp 2x
-                      "
-                    />
-                    <source
-                      type="image/webp"
-                      media="(min-width: 768px) and (max-width: 1199px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-3-354w.webp   1x,
-                        ./assets/image/portfolio/portfolio-work-3-354w@2.webp 2x
-                      "
-                    />
-                    <source
-                      type="image/webp"
-                      media="(min-width: 1200px)"
-                      srcset="
-                        ./assets/image/portfolio/portfolio-work-3-370w.webp   1x,
-                        ./assets/image/portfolio/portfolio-work-3-370w@2.webp 2x
-                      "
-                    />
                     <source
                       media="(max-width: 767px)"
                       srcset="
