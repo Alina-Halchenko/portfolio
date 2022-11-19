@@ -629,16 +629,6 @@ img {
   background-color: #2196f3;
 }
 
-.address {
-  margin-bottom: 10px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-}
-
 .portfolio__nav {
   display: flex;
   flex-wrap: wrap;
@@ -774,4 +764,7 @@ img {
 
 .logo--name {
   color: #2196f3;
+}
+.logo--name:hover {
+  color: black;
 }/*# sourceMappingURL=main.css.map */

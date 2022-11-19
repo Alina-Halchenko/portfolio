@@ -118,7 +118,10 @@
 .self-intro-desc {
     margin-bottom: 30px;
 }
+
 .logo--name {
     color: $accent-color;
-    
+    &:hover {
+        color: black;
+    }
 }
